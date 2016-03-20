@@ -4,13 +4,17 @@
   "private": true,
   "scripts": {
     "start": "node ./app",
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/_mocha -R spec"
   },
   "dependencies": {
-    "chai": "^3.5.0",
     "chalk": "^1.1.1",
+    "log4js": "^0.6.33"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
     "karma-coverage": "^0.5.5",
-    "log4js": "^0.6.33",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "istanbul": "^0.4.2",
+    "sinon": "^1.17.3"
   }
 }
