@@ -1,0 +1,16 @@
+{
+  "name": "traffic-lights-safetyculture",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./app",
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "chalk": "^1.1.1",
+    "karma-coverage": "^0.5.5",
+    "log4js": "^0.6.33",
+    "mocha": "^2.4.5"
+  }
+}
