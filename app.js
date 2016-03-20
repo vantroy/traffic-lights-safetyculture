@@ -1,44 +1,44 @@
 "use strict";
 
-var TrafficLight = require("./lib/traffic-light");
 var constants = require("./lib/constants");
 var LinkedLightsManager = require("./lib/linked-lights-manager");
 
 var cross = new LinkedLightsManager();
 
-var lightN = new TrafficLight("North", constants.GREEN, cross);
-var lightS = new TrafficLight("South", constants.GREEN, cross);
-var lightW = new TrafficLight("West", constants.RED, cross);
-var lightE = new TrafficLight("East", constants.RED, cross);
 
-// for (var i = 0; i < 4; i++) {
-//     light._cycle();
-// }
+cross.addTrafficLight("North", constants.GREEN, checkError);
+cross.addTrafficLight("South", constants.GREEN, checkError);
+cross.addTrafficLight("West", 'YOLO', checkError);
+cross.addTrafficLight("East", constants.RED, checkError);
+cross.addTrafficLight("North Right", constants.GREEN, checkError);
 
-// lightN._state();
-
-cross.emit("change-yellow");
-
-console.log("------------------------------------");
-
-cross.emit("change-lights");
+function checkError(err) {
+    if(err) {
+        // Do something
+        // For this exercise error is already being logged.
+    }
+}
 
 console.log("------------------------------------");
 
-cross.emit("change-yellow");
+cross.tick(() => {});
 
 console.log("------------------------------------");
 
-cross.emit("change-lights");
+cross.tick(() => {});
 
 console.log("------------------------------------");
 
-cross.emit("change-yellow");
+cross.tick(() => {});
 
 console.log("------------------------------------");
 
-cross.emit("change-lights");
+cross.tick(() => {});
 
 console.log("------------------------------------");
 
-cross.emit("change-yellow");
+cross.tick(() => {});
+
+console.log("------------------------------------");
+
+cross.tick(() => {});
