@@ -8,11 +8,10 @@
   },
   "dependencies": {
     "chalk": "^1.1.1",
-    "log4js": "^0.6.33"
+    "winston": "^2.2.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "karma-coverage": "^0.5.5",
     "mocha": "^2.4.5",
     "istanbul": "^0.4.2",
     "sinon": "^1.17.3"
