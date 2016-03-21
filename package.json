@@ -3,12 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./app",
+    "start": "node ./crossroad-lights",
     "test": "./node_modules/.bin/_mocha -R spec"
   },
   "dependencies": {
     "chalk": "^1.1.1",
-    "winston": "^2.2.0"
+    "winston": "^2.2.0",
+    "dateformat": "latest"
   },
   "devDependencies": {
     "chai": "^3.5.0",

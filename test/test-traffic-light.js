@@ -99,6 +99,15 @@ describe('in the TrafficLight class', function () {
                 expect(spy.calledWith('test', 'YELLOW')).to.be.ok;
             });
 
+            it('report completed state change on "light-changed-colored" event with name and new lit state', function () {
+                let manager = new LinkedLightsManager();
+                let light = new TrafficLight('test', c.GREEN, manager);
+                let spy = sinom.spy();
+                manager.on('light-changed-colored', spy);
+                manager.emit('change-yellow');
+                expect(spy.calledWith('test')).to.be.ok;
+            });
+
         });
     });
 
