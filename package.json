@@ -1,5 +1,6 @@
 {
   "name": "traffic-lights-safetyculture",
+  "author": "Rodrigo Del Cistia Andrade",
   "version": "0.0.1",
   "private": true,
   "scripts": {
