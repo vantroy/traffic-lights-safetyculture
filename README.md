@@ -36,15 +36,25 @@ were not tested, but it uses some features of ECMA Script 6, so be advised it mi
 
 Clone this repository:
 
+    git clone https://github.com/vantroy/traffic-lights-safetyculture.git
+    cd traffic-lights-safetyculture
+
+**Install**
+
+    npm install
 
 
-***Running tests***
+## Run
+    npm start
+
+## Tests & Coverage
+**Running tests**
 
     npm test
     
-***Generating Coverage***    
+**Generating Coverage**
 
- Get the Istanbul coverage tool installed
+ Install the Istanbul coverage tool
    
     npm install istanbul -g
 
@@ -54,4 +64,4 @@ Clone this repository:
     
 Open in a browser:
 
-    ./coverage/lcov-report/index.html
+    open ./coverage/lcov-report/index.html
