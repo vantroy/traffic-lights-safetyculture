@@ -22,14 +22,16 @@ This little app outputs the result of simulating a set of traffic lights within 
 
   * **Output format**: as it was not specified, I went with simplicity, so when ran the application simply outputs to
   terminal console the resulting state changes along with its simulated times. Again, this can be easily adapted to a
-  more useful format.
+  more useful format and the variables controlling the simulation start and running time are the top of
+  `crossroad-lights.js` in the root folder. Cycle and Yellow time configurations are found in
+  `/config/time-configs.js`
 
 
 # Running
 
 ## Requirements
-This application was developed with and requires [Node.js version **5.9.0**](https://nodejs.org/en/). Earlier versions
-were not tested, but it uses some features of ECMA Script 6, so be advised it might not work in earleir versions of
+This application was developed with [Node.js version **5.9.0**](https://nodejs.org/en/). Earlier versions
+were not tested, but it uses some features of ECMA Script 6, so be advised it might not work in earlier versions of
  Node.js
 
 ## Instalation
@@ -65,3 +67,6 @@ Clone this repository:
 Open in a browser:
 
     open ./coverage/lcov-report/index.html
+
+----------------------------------
+*Have a good day   :)*
