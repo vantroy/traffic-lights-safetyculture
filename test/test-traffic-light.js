@@ -47,11 +47,11 @@ describe('in the TrafficLight class', function () {
         });
 
         it('contain 2 registered listeners when init lit stat IS green', function () {
-            let trafficLight = new TrafficLight('test', 'RED', new LinkedLightsManager());
+            let trafficLight = new TrafficLight('test', 'GREEN', new LinkedLightsManager());
             let numLights = trafficLight.linkedLightsManager.listenerCount('change-lights');
             let numYellow = trafficLight.linkedLightsManager.listenerCount('change-yellow');
             expect(numLights).to.equal(1);
-            expect(numYellow).to.equal(0);
+            expect(numYellow).to.equal(1);
         });
     });
 
@@ -59,6 +59,11 @@ describe('in the TrafficLight class', function () {
         let manager = new LinkedLightsManager();
         let light = new TrafficLight('test', c.GREEN, manager);
         context('when initialized with name "test" and a GREEN light should', function () {
+
+            it('cycle if "change-yellow" happens', function () {
+                manager.emit('change-yellow');
+                expect(light.lit).to.equal('YELLOW');
+            });
 
             it('NOT cycle if "change-yellow" happens again', function () {
                 manager.emit('change-yellow');
